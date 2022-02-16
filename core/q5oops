@@ -1,25 +1,37 @@
-abstract class Persistence {
-    abstract public String persist();
-}
-class FilePersistence extends Persistence{
+class Rectangle extends Shape5 {
     @Override
-    public String persist() {
-        return "File is persisted";
-    }
-}
-class DatabasePersistence extends Persistence{
-    @Override
-    public String persist() {
-        return "Data is persisted";
+    public String draw() {
+        return "Rectangle drawn : []";
     }
 }
 
-public class Assignment2Q6 {
-    public static void main(String[] args) {
-        DatabasePersistence i = new DatabasePersistence();
-        FilePersistence j = new FilePersistence();
-        System.out.println(i.persist());
-        System.out.println(j.persist());
-
+class Line5 extends Shape5{
+    @Override
+    public String draw() {
+        return "line drawn : ------";
     }
 }
+
+class Cube5 extends Shape5 {
+    @Override
+    public String draw() {
+        return "Cube drawn : ";
+    }
+}
+abstract class Shape5{
+   final int b = 1;
+    abstract public String draw();
+   public void display(){
+     System.out.println("This is display method");
+   }
+   abstract public void calculateArea();
+}
+
+public class line5 extends Shape5{
+   public static void main(String args[]){
+      line5 obj = new line5();
+      obj.display();
+     //obj.b=200;
+  }
+}
+   
