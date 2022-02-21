@@ -10,10 +10,10 @@ public class ProductMain {
 		Scanner sc=new Scanner(System.in);
 		HashSet<Product>  set = new HashSet<>();
 		
-		Product p1 = new Product("HP-Laptop",2000, 5,LocalDate.of(2020,2,4));
-		Product p2 = new Product("Dell-Laptop",1600,5,LocalDate.of(2020,5,17));
-		Product p3 = new Product("Apple-Laptop",20000,5, LocalDate.of(2020,6,30));
-		Product p4 = new Product("HP-Laptop",1000,5,LocalDate.of(2020,6,15));
+		Product p1 = new Product("HP-Laptop",2000, 5,LocalDate.of(2022,2,4));
+		Product p2 = new Product("Dell-Laptop",1600,5,LocalDate.of(2022,5,17));
+		Product p3 = new Product("Apple-Laptop",20000,5, LocalDate.of(2022,6,30));
+		Product p4 = new Product("HP-Laptop",1000,5,LocalDate.of(2022,6,15));
 		
 		set.add(p1);
 		set.add(p2);
