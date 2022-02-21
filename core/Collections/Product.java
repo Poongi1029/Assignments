@@ -1,36 +1,93 @@
-import java.time.LocalDate;
-import java.util.*;
-import java.util.Iterator;
+import java.util.Date;
 import java.util.Scanner;
+import java.time.LocalDate;
 
-public class ProductMain {
-	
-	public static void main(String[] args) {
-		
-		Scanner sc=new Scanner(System.in);
-		HashSet<Product>  set = new HashSet<>();
-		
-		Product p1 = new Product("HP-Laptop",2000, 5,LocalDate.of(2020,2,4));
-		Product p2 = new Product("Dell-Laptop",1600,5,LocalDate.of(2020,5,17));
-		Product p3 = new Product("Apple-Laptop",20000,5, LocalDate.of(2020,6,30));
-		Product p4 = new Product("HP-Laptop",1000,5,LocalDate.of(2020,6,15));
-		
-		set.add(p1);
-		set.add(p2);
-		set.add(p3);
-		set.add(p4);
-		
-		System.out.println("Enter the  Range from");
-		int p=sc.nextInt();
-		System.out.println("TO");
-		int c=sc.nextInt();
-		for(Product b:set){ 
-			if(b.productCost>=p && b.productCost<=c)
-            System.out.println(b.productName+" "+b.productCost+" "+b.startRating+" "+b.manifacturingDate);    
-        }  
-		/*Iterator<Product> itr=set.iterator();    
-	    while(itr.hasNext()){    
-	       System.out.println(itr.next());    
-	    }    */
+public class Product
+{
+     String productName;
+     int productCost;
+     int startRating;
+     Date  manifacturingDate;
+
+	public Product() {
+		super();
+
 	}
+
+	public Product(String productName, int productCost, int startRating, Date manifacturingDate) {
+		super();
+		this.productName = productName;
+		this.productCost = productCost;
+		this.startRating = startRating;
+		this.manifacturingDate = manifacturingDate;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((manifacturingDate == null) ? 0 : manifacturingDate.hashCode());
+		result = prime * result + productCost;
+		result = prime * result + ((productName == null) ? 0 : productName.hashCode());
+		result = prime * result + startRating;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Product other = (Product) obj;
+		if (manifacturingDate == null) {
+			if (other.manifacturingDate != null)
+				return false;
+		} else if (!manifacturingDate.equals(other.manifacturingDate))
+			return false;
+		if (productCost != other.productCost)
+			return false;
+		if (productName == null) {
+			if (other.productName != null)
+				return false;
+		} else if (!productName.equals(other.productName))
+			return false;
+		if (startRating != other.startRating)
+			return false;
+		return true;
+	}
+
+	public String getProductName() {
+		return productName;
+	}
+
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+
+	public int getProductCost() {
+		return productCost;
+	}
+
+	public void setProductCost(int productCost) {
+		this.productCost = productCost;
+	}
+
+	public int getStartRating() {
+		return startRating;
+	}
+
+	public void setStartRating(int startRating) {
+		this.startRating = startRating;
+	}
+
+	public Date getManifacturingDate() {
+		return manifacturingDate;
+	}
+
+	public void setManifacturingDate(Date manifacturingDate) {
+		this.manifacturingDate = manifacturingDate;
+	} 
 }
