@@ -10,8 +10,8 @@ import java.lang.reflect.Method;
 
 @interface Info{
 	int AuthorID();
-	String Author() default "Prajwal";
-	String Supervisor() default "Samriddhi";
+	String Author() default "Poonguzhali";
+	String Supervisor() default "iman";
 	String Date();
 	String Time();
 	int version();
