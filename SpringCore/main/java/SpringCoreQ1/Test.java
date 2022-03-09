@@ -12,7 +12,7 @@ public class Test {
         customer.customerDetail();
 
         // using constructor injection
-        Customer customerCon=(Customer) context.getBean("customerCon");
+        Customer customerCon=(Customer) context.getBean(" customerCon");
         customerCon.customerDetail();
 
     }
