@@ -35,6 +35,6 @@ public class BeanLifeCycle implements InitializingBean, DisposableBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println("Initization bean");
+        System.out.println("Initization bean.");
     }
 }
