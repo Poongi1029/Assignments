@@ -49,10 +49,7 @@ public class Customer {
     }
 
     public void customerDetail(){
-        System.out.println("Customer Id: "+getCustomerId()+"\n"+
-                           "Name: "+getCustomerName()+"\n"+
-                           "Customer Contact: "+getCustomerContact()+"\n"+
-                            "Address: "+
+        System.out.println("Customer Id: "+getCustomerId()+"\n"+"Name: "+getCustomerName()+"\n"+"Customer Contact: "+getCustomerContact()+"\n"+ "Address: "+
                             "Street: "+getCustomerAddress().getStreet()+" City: "+getCustomerAddress().getCity()+" State: "+getCustomerAddress().getState()+" Country: "+getCustomerAddress().getCountry()+" zip: "+getCustomerAddress().getZip());
     }
 
