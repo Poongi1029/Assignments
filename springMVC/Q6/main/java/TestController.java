@@ -1,4 +1,4 @@
-package com.Q6;
+package com.springq6;
 
 import javax.validation.Valid;
 
