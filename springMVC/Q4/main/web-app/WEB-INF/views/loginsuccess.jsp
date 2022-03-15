@@ -1,15 +1,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Error Page</title>
+    <title>Login Successful</title>
 </head>
 <style>
     h1{
-        color: red;
+        color: green;
     }
 </style>
 <body>
-<h1 align="center">Username or password is incorrect</h1>
-
+    <h1>Login Successful</h1>
 </body>
 </html>
