@@ -1,4 +1,4 @@
-package com.springQ6;
+package com.springq6;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
